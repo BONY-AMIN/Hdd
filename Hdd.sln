@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hdd.Core", "Hdd.Core\Hdd.Core.csproj", "{B35A20F5-D495-43DD-A781-0E39CAC8DB7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hdd.Domain", "Hdd.Domain\Hdd.Domain.csproj", "{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hdd.Web", "Hdd.Web\Hdd.Web.csproj", "{D9317149-75B0-4D67-896E-B866F938ED9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B35A20F5-D495-43DD-A781-0E39CAC8DB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35A20F5-D495-43DD-A781-0E39CAC8DB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35A20F5-D495-43DD-A781-0E39CAC8DB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35A20F5-D495-43DD-A781-0E39CAC8DB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9317149-75B0-4D67-896E-B866F938ED9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9317149-75B0-4D67-896E-B866F938ED9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9317149-75B0-4D67-896E-B866F938ED9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9317149-75B0-4D67-896E-B866F938ED9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EA7346E-BA69-41E2-A2C9-3B27C5434EE9}
+	EndGlobalSection
+EndGlobal
