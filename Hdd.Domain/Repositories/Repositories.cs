@@ -8,21 +8,18 @@ using System.Linq;
 
 namespace Hdd.Domain.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity>
-        where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity:class
     {
-        internal HddEntities db;
-        internal DbSet<TEntity> dbSet;
+        protected readonly DbContext Context;
 
-        public Repository(HddEntities db)
+        public Repository(DbContex context)
         {
-            this.db = db;
-            this.dbSet = db.Set<TEntity>();
+            Context = context;
         }
 
         public virtual IQueryable<TEntity> Get(string includeProperties = "")
         {
-            IQueryable<TEntity> query = dbSet;
+            IQueryable<TEntity> query = Context;
             foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeProperty);
@@ -32,34 +29,34 @@ namespace Hdd.Domain.Repositories
 
         public virtual TEntity GetById(object id)
         {
-            return dbSet.Find(id);
+            return Context.Find(id);
         }
 
         public virtual void Insert(TEntity entity)
         {
-            dbSet.Add(entity);
+            Context.Add(entity);
         }
 
         public virtual void InsertRange(IEnumerable<TEntity> entity)
         {
-            dbSet.AddRange(entity);
+            Context.AddRange(entity);
         }
 
         public virtual void Update(TEntity entity)
         {
-            dbSet.Attach(entity);
-            db.Entry(entity).State = EntityState.Modified;
+            Context.Attach(entity);
+            context.Entry(entity).State = EntityState.Modified;
         }
 
         public virtual void Delete(TEntity entity)
         {
-            dbSet.Attach(entity);
-            db.Entry(entity).State = EntityState.Deleted;
+            Context.Attach(entity);
+            context.Entry(entity).State = EntityState.Deleted;
         }
 
         public virtual void DeleteRange(IEnumerable<TEntity> entity)
         {
-            dbSet.RemoveRange(entity);
+            Context.RemoveRange(entity);
         }
     }
 }

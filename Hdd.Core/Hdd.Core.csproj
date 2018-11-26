@@ -43,5 +43,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TicketService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hdd.Domain\Hdd.Domain.csproj">
+      <Project>{33C72CDA-3B7B-4EE4-9B57-00EB7934666A}</Project>
+      <Name>Hdd.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

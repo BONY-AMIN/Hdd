@@ -15,14 +15,14 @@ namespace Hdd.Core.Services
     {
         private UnitOfWork unitOfWork;
 
-        public BillingService(UnitOfWork _unitOfWork)
+        public TicketService(UnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
         }
 
-        public void Create(BillingViewModel billingVM)
+        public void Create(TicketViewModel ticketVM)
         {
-            var Billing = new Billing
+            var Ticket = new Ticket
             {
 
                 BillNo = billingVM.BillNo,
